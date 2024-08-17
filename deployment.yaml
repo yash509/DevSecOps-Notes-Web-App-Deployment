@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notes-keeper-deployment
+spec:
+  replicas: 6  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: notes-keeper
+  template:
+    metadata:
+      labels:
+        app: notes-keeper
+    spec:
+      containers:
+      - name: notes-keeper
+        image: yash5090/notes-keeper:latest
+        ports:
+        - containerPort: 5000
