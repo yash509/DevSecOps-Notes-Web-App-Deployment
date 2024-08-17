@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lms-system-service
+  name: notes-keeper-service
 spec:
   selector:
-    app: lms-system
+    app: notes-keeper
   ports:
     - protocol: TCP
       port: 5000
